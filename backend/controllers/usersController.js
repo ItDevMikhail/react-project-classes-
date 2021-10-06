@@ -64,7 +64,7 @@ class UsersController {
     }
     async login(req, res) {
         try {
-            const user = req.body;
+            const user = req.body;            
             user.login = user.login.toLowerCase();
             const checkUser = await Users.findOne({ login: user.login });
             if (checkUser) {

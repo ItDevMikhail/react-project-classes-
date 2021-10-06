@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a {
+    color: #fff;
+    text-decoration: none;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
   }
-}
+  .header {
+    background-color: #20232a;
+    color: #ffffff;
+    z-index: 1;
+    width: 100%;
+  }
+  .navMenu {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .navMenuleft,
+  .navMenuRight {
+    height: 100%;
+    display: flex;
+  }
+  .navMenuleft a,
+  .navMenuRight a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+    font-size: 18px;
+  }
+  a.selected {
+    border-bottom: 3px solid #61dafb;
+    color: #61dafb;
+  }
+  .header a:hover {
+    border-bottom: 3px solid #61dafb;
+    color: #61dafb;
+  }
+  
+  .registerForm,
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .registerForm input,
+  .loginForm input,
+  .createBookArea {
+    width: 280px;
+  }
+
+  .inputErrors {
+    border-bottom: 1px solid red;
+  }
+  .registerCard,
+  .loginCard {
+    max-width: 320px;
+    margin: 100px auto;
+  }
+  .registerCardHeader,
+  .loginCardHeader {
+    text-align: center;
+  }
+  .libraryPage a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .libraryPage li {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .libraryPage ul {
+    max-width: 300px;
+  }
+  .libraryPage {
+    position: relative;
+  }
+  .libraryPage span{
+    color: gray;
+    cursor: pointer;
+  }
+  .libraryPage span:hover{
+    color: #000;
+    cursor: pointer;
+  }
+  .progressBar {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    display: none;
+  }
+  .progressBar.active {
+    display: block;
+  }
+  .detailPage {
+    position: relative;
+  }
+  .detailPage .active {
+    display: block;
+  }
+  .detailPage .hidden {
+    display: none;
+  }
+  .libraryPage .addedFavorite span{
+   color: #000;
+  }
+  
