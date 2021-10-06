@@ -116,4 +116,13 @@ a {
   .libraryPage .addedFavorite span{
    color: #000;
   }
+  .addBookInput .addBookInputName,
+  .addBookInput .MuiFormControl-root,
+  .addBookInput .MuiInput-underline:hover:not(.Mui-disabled):before{
+    border-bottom: 1px solid red;
+  }
+  
+  .addBookInput .MuiInput-underline:before{
+    border: none;
+  }
   

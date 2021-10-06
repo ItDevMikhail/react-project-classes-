@@ -13,7 +13,7 @@ interface ILoginPageState {
 type changeTarget = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 type focusTarget = React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>;
 
-class LoginPage extends Component<{}, ILoginPageState> {
+class LoginPage extends Component<{logged(val: boolean): void}, ILoginPageState> {
 
     constructor(props: any) {
         super(props);
@@ -77,9 +77,10 @@ class LoginPage extends Component<{}, ILoginPageState> {
                 throw new Error(data.message || 'Что-то пошло не так');
             }
             if (data) {
-                console.log('вы успешно авторизовались')
-                // logged(true);
-                // history.push("/library");
+                console.log('вы успешно авторизовались');
+                window.location.search = '';
+                window.location.pathname = '/library';
+                this.props.logged(true);
             }
         } catch (e: any) {
             console.log(e.message);
